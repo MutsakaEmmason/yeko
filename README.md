@@ -1,2 +1,2 @@
-# yeko
+# lib
 library project
