@@ -1,6 +1,12 @@
 from app.utils.db import SessionLocal
 from app.models.models import Book, Category
+from models import Book  
 
+
+
+
+        
+        
 
 def get_all_books():
     with SessionLocal() as session:
@@ -13,6 +19,7 @@ def get_all_books():
             "Available": b.available_copies,
             "Total": b.total_copies
         } for b in books]
+    return Book.query.all()
 
 
 def add_book(title, author, category_id, total, available):
